@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextToSpeechActivity"
+    android:orientation="vertical"
+    android:background="#CEE2FA"
+
+    >
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_alignParentTop="true"
+      android:id="@+id/adLayout"
+
+      >
+
+    <com.google.android.gms.ads.AdView
+
+        android:id="@+id/adView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-2173890419930461/2336930208">
+
+
+      <!--
+      Test Ad: ca-app-pub-3940256099942544/6300978111
+
+      Real AD Unit ID: ca-app-pub-2173890419930461/2336930208
+      -->
+
+
+    </com.google.android.gms.ads.AdView>
+
+  </LinearLayout>
+
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cardView"
+      android:layout_width="140dp"
+      android:layout_height="55dp"
+      android:layout_alignParentRight="true"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="10dp"
+      android:background="@drawable/spinner_design"
+      android:layout_below="@id/adLayout"
+    >
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="10dp"
+        android:layout_weight="45"
+        android:background="@drawable/spinner_design"
+        android:clickable="true"
+
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingLeft="20dp" />
+
+
+  </com.google.android.material.card.MaterialCardView>
+
+
+  <EditText
+      android:id="@+id/keyboardEditText"
+      android:layout_width="match_parent"
+      android:layout_height="300dp"
+
+      android:layout_below="@id/cardView"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="5dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginBottom="10dp"
+      android:background="@drawable/edit_text_corner"
+
+
+      android:elevation="10dp"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:gravity="start"
+      android:hint="Texts"
+      android:padding="10dp"
+      android:textIsSelectable="true"
+
+      />
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:orientation="horizontal"
+      android:layout_below="@id/keyboardEditText"
+      android:layout_marginTop="5dp"
+      android:background="@drawable/edit_text_corner"
+      android:layout_marginRight="10dp"
+      android:layout_marginLeft="10dp"
+      android:gravity="center"
+      android:padding="5dp"
+
+    >
+    
+    <ImageView
+        android:id="@+id/removeIcon"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/remove"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+
+      />
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="40dp"
+
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/image_design"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="?"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+
+        />
+    <TextView
+        android:id="@+id/dotTextView"
+        android:layout_width="40dp"
+
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/image_design"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="."
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+
+
+        />
+    <TextView
+        android:id="@+id/dariTextView"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+
+        android:background="@drawable/image_design"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="।"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+
+
+        />
+
+    <TextView
+        android:id="@+id/commaTextView"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+
+        android:background="@drawable/image_design"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text=","
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+
+
+        />
+
+
+    <ImageView
+        android:id="@+id/remover"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/characterremove"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+
+        />
+
+  </LinearLayout>
+
+
+
+
+
+
+
+
+  <ImageView
+      android:id="@+id/microPhone"
+      android:layout_width="60dp"
+      android:layout_height="60dp"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginRight="20dp"
+      android:layout_marginBottom="50dp"
+      android:clickable="true"
+      android:focusable="true"
+      android:foreground="?attr/selectableItemBackground"
+      android:src="@drawable/microphone"
+
+
+      />
+
+  <ImageView
+      android:id="@+id/keyBoardIcon"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_below="@id/shareIcon"
+      android:layout_alignParentRight="true"
+      android:layout_centerInParent="true"
+      android:layout_marginTop="13dp"
+      android:layout_marginRight="80dp"
+      android:layout_marginBottom="5dp"
+
+      android:clickable="true"
+      android:focusable="true"
+      android:foreground="?attr/selectableItemBackground"
+      android:onClick="openKeyboard"
+      android:src="@drawable/keyboardicon" />
+
+  <ImageView
+      android:id="@+id/shareIcon"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_below="@id/copyIcon"
+
+      android:layout_alignParentRight="true"
+      android:layout_marginRight="95dp"
+      android:layout_marginBottom="10dp"
+      android:clickable="true"
+      android:focusable="true"
+      android:foreground="?attr/selectableItemBackground"
+      android:src="@drawable/shareicon"
+
+      />
+
+  <ImageView
+      android:id="@+id/copyIcon"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_above="@id/microPhone"
+      android:layout_alignParentRight="true"
+      android:layout_marginRight="55dp"
+      android:layout_marginBottom="10dp"
+      android:clickable="true"
+      android:focusable="true"
+      android:foreground="?attr/selectableItemBackground"
+      android:src="@drawable/copyicon" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

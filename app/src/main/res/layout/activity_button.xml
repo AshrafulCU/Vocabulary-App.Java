@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ButtonActivity"
+    android:orientation="vertical"
+
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/texttospeechlayoutdesign"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/keyboard"
+
+        >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text="Voice \nKeyboard"
+            android:textColor="#FDFCFD"
+            android:textSize="30sp"
+            android:textStyle="italic|bold"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+
+            />
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieMic"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="lottievoice.json"
+
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+
+            />
+        <!-- app:lottie_loop="true" if we use it, it continuously show its activity -->
+
+
+
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/keyboard"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFD6D6"
+        >
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_corner"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/aButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="A  \n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+            <Button
+                android:id="@+id/bButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="B \n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_corner"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/cButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="C \n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+            <Button
+                android:id="@+id/dButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="D \n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_corner"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/eButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="E \n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+            <Button
+                android:id="@+id/fButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="F\n  Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_corner"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/gButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="G \n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+            <Button
+                android:id="@+id/hButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="H \n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_corner"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/iButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="I\n  Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+            <Button
+                android:id="@+id/jklButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="J,K,L\n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_corner"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/mButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="M\n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+            <Button
+                android:id="@+id/motivationButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="Motivation"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_corner"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/noButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="N,O\n  Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+            <Button
+                android:id="@+id/pButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="P\n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_corner"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/qrButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="Q,R\n  Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+            <Button
+                android:id="@+id/sButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="S  \nRelated Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_corner"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/tButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="T\n  Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+            <Button
+                android:id="@+id/uButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="U \n   Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/edit_text_corner"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/vButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="V\n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+            <Button
+                android:id="@+id/wyzButton"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttondesign"
+                android:text="W,Y,Z\n Related Word"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold|italic"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

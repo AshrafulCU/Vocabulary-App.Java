@@ -1,0 +1,23 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Bangla Oxford  3000 Vocabulary for  update/app/src/main/res/drawable/buttondesign.xml" value="0.12" />
+        <entry key="..\:/Bangla Oxford  3000 Vocabulary for  update/app/src/main/res/drawable/edittext.xml" value="0.1555" />
+        <entry key="..\:/Bangla Oxford  3000 Vocabulary for  update/app/src/main/res/drawable/texttospeechlayoutdesign.xml" value="0.142" />
+        <entry key="..\:/Bangla Oxford  3000 Vocabulary for  update/app/src/main/res/layout/activity_button.xml" value="0.22" />
+        <entry key="..\:/Bangla Oxford  3000 Vocabulary for  update/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Bangla Oxford  3000 Vocabulary for  update/app/src/main/res/layout/activity_main_pdf_shower.xml" value="0.22" />
+        <entry key="..\:/Bangla Oxford  3000 Vocabulary for  update/app/src/main/res/layout/activity_text_to_speech.xml" value="0.18" />
+        <entry key="..\:/Bangla Oxford  3000 Vocabulary for  update/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1005" />
+        <entry key="..\:/Bangla Oxford  3000 Vocabulary for  update/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
