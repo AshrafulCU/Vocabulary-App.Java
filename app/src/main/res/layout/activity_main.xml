@@ -6,19 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
 
-    android:background="#BCB6AE"
+    android:background="#FFFFFF"
     android:gravity="center"
 
 
     >
 
-    <ImageView
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="80dp"
+        app:cardElevation="15dp"
+        app:strokeColor="#851E3E"
+        app:strokeWidth="2dp"
+        app:cardBackgroundColor="@android:color/white">
 
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/spl"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/spl"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CircleImage"
+            />
+    </com.google.android.material.card.MaterialCardView>
 
-        />
 
 
 

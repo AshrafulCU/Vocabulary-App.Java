@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="ucrop_color_toolbar">#FCACC5</color>
+    <color name="ucrop_color_statusbar">@color/purple_700</color>
+    <color name="ucrop_color_widget_active">@color/purple_700</color>
+
 </resources>

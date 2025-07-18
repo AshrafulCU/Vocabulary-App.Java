@@ -38,13 +38,13 @@
             android:layout_marginBottom="5dp"
             android:layout_alignParentBottom="true"
             app:adSize="SMART_BANNER"
-            app:adUnitId="ca-app-pub-2173890419930461/8374890792"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
             >
 
             <!--
             Test ID: ca-app-pub-3940256099942544/6300978111
 
-            Real Ad unit ID: ca-app-pub-2173890419930461/8374890792
+
 
 
             -->

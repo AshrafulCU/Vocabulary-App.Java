@@ -1,9 +1,9 @@
 package com.mbashrafulislam.banglaoxford3000vocabulary;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
             public void run (){
                 try {
                     sleep(3*1000);
-                    Intent myIntent = new Intent(getBaseContext(),ButtonActivity.class);
+                    Intent myIntent = new Intent(getBaseContext(),FirstActivity.class);
                     startActivity(myIntent);
                     finish();
                 }catch (Exception e){

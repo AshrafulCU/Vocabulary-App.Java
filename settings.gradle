@@ -1,8 +1,9 @@
 pluginManagement {
     repositories {
-        gradlePluginPortal()
+
         google()
         mavenCentral()
+        gradlePluginPortal()
 
     }
 }
@@ -12,6 +13,8 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url 'https://jitpack.io' }
+        // for Pop up box, it is from image picker library
+        maven { url "https://jitpack.io" }
 
 
 
