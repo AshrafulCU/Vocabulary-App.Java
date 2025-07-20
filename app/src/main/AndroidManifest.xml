@@ -16,6 +16,7 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <!-- android:hardwareAccelerated="true"  to show the video ads -->
 
     <application
@@ -38,9 +39,12 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
+            android:value="ca-app-pub-2173890419930461~2210293733" />
         <!--
          Test ID: ca-app-pub-3940256099942544~3347511713
+
+
+
 
 
 

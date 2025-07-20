@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TextScannerActivity">
+    tools:context=".TextScannerActivity"
+    android:id="@+id/textScanneActivityLayout"
+
+    >
 
     <!-- Scrollable Card for Text -->
     <androidx.cardview.widget.CardView
@@ -51,20 +54,7 @@
             android:orientation="horizontal"
             android:padding="12dp">
 
-            <Button
-                android:id="@+id/caputer_button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Capture"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/rounded_button"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground"
-                />
+
 
             <Button
                 android:id="@+id/copy_button"
@@ -78,8 +68,26 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
+                android:layout_marginEnd="8dp"
+                android:textAllCaps="false"
 
 
+                />
+
+
+            <Button
+                android:id="@+id/caputer_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Capture"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
                 />
         </LinearLayout>
 

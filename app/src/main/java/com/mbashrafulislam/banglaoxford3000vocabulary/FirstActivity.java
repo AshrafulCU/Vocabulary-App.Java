@@ -1,13 +1,22 @@
 package com.mbashrafulislam.banglaoxford3000vocabulary;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.cardview.widget.CardView;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.LoadAdError;
@@ -23,6 +32,7 @@ public class FirstActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
 
@@ -31,6 +41,32 @@ public class FirstActivity extends AppCompatActivity {
         textScanner = findViewById(R.id.textScannerCardView);
         qRcodeScanner = findViewById(R.id.qRcodeScanner);
 
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+        // For the status bar color and text white
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#851E3E")); // set your desire color
+
+        }
+
+        // To make the text white
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            getWindow().setDecorFitsSystemWindows(false);
+        } else {
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            );
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            // Ensure white icons by NOT using LIGHT_STATUS_BAR flag
+            getWindow().getDecorView().setSystemUiVisibility(0);
+        }
 
 
         vocabulary.setOnClickListener(new View.OnClickListener() {
@@ -64,8 +100,6 @@ public class FirstActivity extends AppCompatActivity {
 
                 if (interstitialAd != null){
                     interstitialAd.show(FirstActivity.this);
-                }else {
-                    Toast.makeText(FirstActivity.this, "Ad is loading...", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -79,15 +113,17 @@ public class FirstActivity extends AppCompatActivity {
 
                 if (interstitialAd != null){
                     interstitialAd.show(FirstActivity.this);
-                }else {
-                    Toast.makeText(FirstActivity.this, "Ad is loading...", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
         MobileAds.initialize(getApplicationContext());
         AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(getApplicationContext(), "ca-app-pub-3940256099942544/1033173712",
+        InterstitialAd.load(getApplicationContext(), "ca-app-pub-2173890419930461/8993075146",
+
+             //Test Ad:   ca-app-pub-3940256099942544/1033173712
+
+                //Real Ad Unit:   ca-app-pub-2173890419930461/8993075146
                 adRequest, new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
@@ -109,9 +145,22 @@ public class FirstActivity extends AppCompatActivity {
         );
 
 
+        applyDisplayCutouts();
 
 
 
+    }
 
+
+
+    private void applyDisplayCutouts() {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.firstActivityLayout), (v, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars()
+                            | WindowInsetsCompat.Type.displayCutout()
+            );
+            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            return WindowInsetsCompat.CONSUMED;
+        });
     }
 }

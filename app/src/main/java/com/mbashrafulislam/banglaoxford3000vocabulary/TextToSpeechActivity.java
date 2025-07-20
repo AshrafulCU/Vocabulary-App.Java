@@ -26,9 +26,13 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
@@ -51,6 +55,7 @@ public class TextToSpeechActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_to_speech);
 
@@ -221,6 +226,20 @@ public class TextToSpeechActivity extends AppCompatActivity {
                     sharedTextOnly(keyboardEditText.getText().toString());
                 }
             }
+        });
+
+        applyDisplayCutouts();
+
+    }
+
+    private void applyDisplayCutouts() {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.textToSpeechLayout), (v, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars()
+                            | WindowInsetsCompat.Type.displayCutout()
+            );
+            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            return WindowInsetsCompat.CONSUMED;
         });
     }
 

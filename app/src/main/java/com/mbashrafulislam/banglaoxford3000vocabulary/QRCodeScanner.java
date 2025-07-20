@@ -12,8 +12,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -30,6 +34,7 @@ public class QRCodeScanner extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrcode_scanner);
 
@@ -70,8 +75,23 @@ public class QRCodeScanner extends AppCompatActivity {
             }
         });
 
+        applyDisplayCutouts();
+
 
     }
+
+    private void applyDisplayCutouts() {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.qRCodeScannerLayout), (v, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars()
+                            | WindowInsetsCompat.Type.displayCutout()
+            );
+            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            return WindowInsetsCompat.CONSUMED;
+        });
+    }
+
+
 
     private void startQRScanner(){
         IntentIntegrator integrator = new IntentIntegrator(this);

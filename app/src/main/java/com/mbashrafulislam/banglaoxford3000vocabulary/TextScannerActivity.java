@@ -1,9 +1,5 @@
 package com.mbashrafulislam.banglaoxford3000vocabulary;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -17,6 +13,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -42,6 +46,7 @@ public class TextScannerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_scanner);
 
@@ -52,20 +57,32 @@ public class TextScannerActivity extends AppCompatActivity {
         // Initialize the recognizer
         textRecognizer = TextRecognition.getClient(new DevanagariTextRecognizerOptions.Builder().build());
 
-        // Check and request permissions
-        checkAndRequestPermissions();
 
         capture_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                ImagePicker.with(TextScannerActivity.this)
-                        .crop()
+                // Check and request permissions
 
-                        .compress(1024)
-                        .maxResultSize(1080, 1080)
-                        .start();
+                if ( checkAndRequestPermissions()){
+                    ImagePicker.with(TextScannerActivity.this)
+                            .crop()
+
+                            .compress(1024)
+                            .maxResultSize(1080, 1080)
+                            .start();
+                }else {
+                    Toast.makeText(TextScannerActivity.this,
+                            "To Scan, You have to Allow the access to take photo or picture.",
+                            Toast.LENGTH_LONG).show();
+                }
+
+
+
+
             }
+
+
         });
 
         copy_button.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +101,19 @@ public class TextScannerActivity extends AppCompatActivity {
             }
         });
 
+        applyDisplayCutouts();
+
+    }
+
+    private void applyDisplayCutouts() {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.textScanneActivityLayout), (v, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars()
+                            | WindowInsetsCompat.Type.displayCutout()
+            );
+            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            return WindowInsetsCompat.CONSUMED;
+        });
     }
 
     @Override
@@ -127,7 +157,7 @@ public class TextScannerActivity extends AppCompatActivity {
         }
     }
 
-    private void checkAndRequestPermissions() {
+    private boolean checkAndRequestPermissions() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             if (checkSelfPermission(android.Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED ||
                     checkSelfPermission(android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
@@ -136,6 +166,7 @@ public class TextScannerActivity extends AppCompatActivity {
                         android.Manifest.permission.READ_MEDIA_IMAGES,
                         android.Manifest.permission.CAMERA
                 }, REQUEST_CAMERA_CODE);
+                return false; // Permission not granted yet
             }
         } else {
             if (checkSelfPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
@@ -145,9 +176,26 @@ public class TextScannerActivity extends AppCompatActivity {
                         android.Manifest.permission.READ_EXTERNAL_STORAGE,
                         android.Manifest.permission.CAMERA
                 }, REQUEST_CAMERA_CODE);
+                return false; // Permission not granted yet
+            }
+        }
+        return true; // All permissions granted
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == REQUEST_CAMERA_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permissions granted - you can start ImagePicker here if you want
+            } else {
+                Toast.makeText(this, "Permission denied.", Toast.LENGTH_SHORT).show();
             }
         }
     }
+
+
 
 
 

@@ -8,6 +8,8 @@
     android:orientation="vertical"
     android:background="#CEE2FA"
 
+    android:id="@+id/textToSpeechLayout"
+
     >
 
   <TextView
@@ -43,10 +45,11 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="5dp"
         app:adSize="BANNER"
-        app:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        app:adUnitId="ca-app-pub-2173890419930461/2336930208">
 
       <!--
       Test Ad: ca-app-pub-3940256099942544/6300978111
+
 
 
       -->

@@ -1,10 +1,19 @@
 package com.mbashrafulislam.banglaoxford3000vocabulary;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
@@ -28,6 +37,7 @@ public class MainActivityPdfShower extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_pdf_shower);
 
@@ -60,11 +70,38 @@ public class MainActivityPdfShower extends AppCompatActivity {
                 .load();
 
 
+        applyDisplayCutouts();
+        // to make the status bar color and text to color due to edge to edge
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(Color.parseColor("#851E3E")); // Set your desired color
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            getWindow().setDecorFitsSystemWindows(false);
+        } else {
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            );
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            // Ensure white icons by NOT using LIGHT_STATUS_BAR flag
+            getWindow().getDecorView().setSystemUiVisibility(0);
+        }
+
+
+
     }
 
     @Override
     public void onBackPressed() {
         // Show an alert dialog to confirm exit
+        //super.onBackPressed();
         new AlertDialog.Builder(MainActivityPdfShower.this)
                 .setTitle("Make Sure !!!")
                 .setMessage("Do You Want To Really Exit?")
@@ -83,6 +120,19 @@ public class MainActivityPdfShower extends AppCompatActivity {
                     }
                 })
                 .show();
+
+
+    }
+
+    private void applyDisplayCutouts() {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.pdfShowActivityLayout), (v, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars()
+                            | WindowInsetsCompat.Type.displayCutout()
+            );
+            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            return WindowInsetsCompat.CONSUMED;
+        });
     }
 
 }
