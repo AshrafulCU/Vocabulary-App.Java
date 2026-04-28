@@ -1,26 +1,43 @@
+//pluginManagement {
+//    repositories {
+//
+//        google()
+//        mavenCentral()
+//        gradlePluginPortal()
+//
+//    }
+//}
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        google()
+//        mavenCentral()
+//        maven { url 'https://jitpack.io' }
+//        // for Pop up box, it is from image picker library
+//        maven { url "https://jitpack.io" }
+
+//}
+//rootProject.name = "Bangla Oxford 3000 Vocabulary"
+//include ':app'
+// This block tells Gradle where to search for plugins like 'com.android.application'
+
 pluginManagement {
     repositories {
-
         google()
         mavenCentral()
         gradlePluginPortal()
-
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        maven { url 'https://jitpack.io' }
-        // for Pop up box, it is from image picker library
         maven { url "https://jitpack.io" }
-
-
-
-
-
     }
 }
+
 rootProject.name = "Bangla Oxford 3000 Vocabulary"
-include ':app'
+include(":app")
+

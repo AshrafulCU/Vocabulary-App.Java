@@ -119,7 +119,7 @@ public class FirstActivity extends AppCompatActivity {
 
         MobileAds.initialize(getApplicationContext());
         AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(getApplicationContext(), "ca-app-pub-2173890419930461/8993075146",
+        InterstitialAd.load(getApplicationContext(), "ca-app-pub-3940256099942544/1033173712",
 
              //Test Ad:   ca-app-pub-3940256099942544/1033173712
 

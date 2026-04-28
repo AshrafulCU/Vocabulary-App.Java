@@ -6,6 +6,14 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="Theme.PdfView.SelectedTheme" parent="@style/Theme.PdfView.Light">
+        <!-- এখানে আপনি আপনার পছন্দমতো আইকন বা কালার পরিবর্তন করতে পারেন -->
+
+        <item name="pdfView_showToolbar">true</item>
+        <item name="pdfView_disableScreenshots">true</item> <!-- স্ক্রিনশট বন্ধ করতে চাইলে true দিন -->
+        <item name="pdfView_toolbarColor">#851E3E</item> <!-- আপনার স্ট্যাটাস বারের সাথে মিল রেখে কালার -->
+    </style>
+
 
 
 

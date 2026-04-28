@@ -39,9 +39,11 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-2173890419930461~2210293733" />
+            android:value="ca-app-pub-3940256099942544~3347511713" />
         <!--
          Test ID: ca-app-pub-3940256099942544~3347511713
+
+         Real ID: ca-app-pub-2173890419930461~2210293733
 
 
 
@@ -54,7 +56,12 @@
             android:exported="false" />
         <activity
             android:name=".MainActivityPdfShower"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.PdfView.SelectedTheme"
+
+            />
+
+
         <activity
             android:name=".ButtonActivity"
             android:exported="false" />
