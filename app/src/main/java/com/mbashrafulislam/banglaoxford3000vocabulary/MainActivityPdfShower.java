@@ -111,20 +111,11 @@ public class MainActivityPdfShower extends AppCompatActivity {
 
             @Override
             public void onPdfRenderSuccess() {
-                android.widget.Toast.makeText(MainActivityPdfShower.this, "PDF Rendering Complete", android.widget.Toast.LENGTH_SHORT).show();
+               // android.widget.Toast.makeText(MainActivityPdfShower.this, "PDF Rendering Complete", android.widget.Toast.LENGTH_SHORT).show();
             }
         });
 
-        pdfView.setZoomListener(new PdfRendererView.ZoomListener() {
-            @Override
-            public void onZoomChanged(boolean isZoomedIn, float scale) {
-                if (isZoomedIn) {
-                    android.widget.Toast.makeText(MainActivityPdfShower.this, "Zoomed In (Scale: " + scale + ")", android.widget.Toast.LENGTH_SHORT).show();
-                } else {
-                    android.widget.Toast.makeText(MainActivityPdfShower.this, "Original View", android.widget.Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+
 
 
 
@@ -147,11 +138,11 @@ public class MainActivityPdfShower extends AppCompatActivity {
         applyDisplayCutouts();
 
         // স্ট্যাটাস বার কালার সেটআপ
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            Window window = getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.parseColor("#851E3E"));
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            Window window = getWindow();
+//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//            window.setStatusBarColor(Color.parseColor("#851E3E"));
+//        }
     }
 
     @Override

@@ -5,7 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivityPdfShower"
-    android:id="@+id/pdfShowActivityLayout">
+    android:id="@+id/pdfShowActivityLayout"
+    android:paddingBottom="5dp"
+
+
+
+    >
 
     <!-- UPDATED PDF VIEW -->
     <com.rajat.pdfviewer.PdfRendererView
@@ -20,7 +25,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_alignParentBottom="true"
-        android:id="@+id/adLayout">
+        android:id="@+id/adLayout"
+        android:layout_marginBottom="5dp"
+        >
 
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
@@ -29,6 +36,14 @@
             android:layout_marginBottom="5dp"
             app:adSize="SMART_BANNER"
             app:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+
+
+        <!--
+        Test AD:  ca-app-pub-3940256099942544/6300978111
+
+        Real AD: ca-app-pub-2173890419930461/8374890792
+
+        -->
     </LinearLayout>
 
 </RelativeLayout>

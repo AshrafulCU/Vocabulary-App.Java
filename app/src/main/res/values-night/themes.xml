@@ -9,8 +9,15 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!-- [FIX] Edge-to-Edge & Play Store Policy Fix -->
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <!-- ডার্ক মোডে স্ট্যাটাস বারের আইকন সাদা রাখার জন্য এটি false দিন -->
+        <item name="android:windowLightStatusBar">false</item>
+
         <!-- Customize your theme here. -->
     </style>
 </resources>

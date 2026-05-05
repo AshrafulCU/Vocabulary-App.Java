@@ -27,7 +27,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 public class FirstActivity extends AppCompatActivity {
 
 
-    CardView vocabulary, voicekeyboard, textScanner, qRcodeScanner;
+    CardView vocabulary, voicekeyboard, textScanner, qRcodeScanner,ielts;
     private InterstitialAd interstitialAd;
 
     @Override
@@ -40,6 +40,7 @@ public class FirstActivity extends AppCompatActivity {
         voicekeyboard = findViewById(R.id.voicekeyboard_cardView);
         textScanner = findViewById(R.id.textScannerCardView);
         qRcodeScanner = findViewById(R.id.qRcodeScanner);
+        ielts = findViewById(R.id.ielts_cardView);
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
@@ -116,6 +117,20 @@ public class FirstActivity extends AppCompatActivity {
                 }
             }
         });
+
+        ielts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ieltsIntent = new Intent(FirstActivity.this, IeltsActivity.class);
+                startActivity(ieltsIntent);
+
+                if (interstitialAd != null){
+                    interstitialAd.show(FirstActivity.this);
+                }
+
+            }
+        });
+
 
         MobileAds.initialize(getApplicationContext());
         AdRequest adRequest = new AdRequest.Builder().build();

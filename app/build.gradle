@@ -11,8 +11,8 @@ android {
         applicationId "com.mbashrafulislam.banglaoxford3000vocabulary"
         minSdk 24
         targetSdk 36
-        versionCode 20
-        versionName "3.1"
+        versionCode 22
+        versionName "3.3"
 
         // for 16 KB alignment
         ndkVersion "30.0.14904198"
