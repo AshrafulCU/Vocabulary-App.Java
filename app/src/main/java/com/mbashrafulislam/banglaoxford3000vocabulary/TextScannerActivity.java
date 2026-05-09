@@ -158,27 +158,12 @@ public class TextScannerActivity extends AppCompatActivity {
     }
 
     private boolean checkAndRequestPermissions() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            if (checkSelfPermission(android.Manifest.permission.READ_MEDIA_IMAGES) != PackageManager.PERMISSION_GRANTED ||
-                    checkSelfPermission(android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
 
-                requestPermissions(new String[]{
-                        android.Manifest.permission.READ_MEDIA_IMAGES,
-                        android.Manifest.permission.CAMERA
-                }, REQUEST_CAMERA_CODE);
-                return false; // Permission not granted yet
-            }
-        } else {
-            if (checkSelfPermission(android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
-                    checkSelfPermission(android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-
-                requestPermissions(new String[]{
-                        android.Manifest.permission.READ_EXTERNAL_STORAGE,
-                        android.Manifest.permission.CAMERA
-                }, REQUEST_CAMERA_CODE);
-                return false; // Permission not granted yet
-            }
+        if (checkSelfPermission(android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            requestPermissions(new String[]{android.Manifest.permission.CAMERA}, REQUEST_CAMERA_CODE);
+            return false;
         }
+
         return true; // All permissions granted
     }
 

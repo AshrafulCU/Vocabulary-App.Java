@@ -90,17 +90,42 @@ public class QRCodeScanner extends AppCompatActivity {
             return WindowInsetsCompat.CONSUMED;
         });
     }
+//    private void startQRScanner(){
+//        IntentIntegrator integrator = new IntentIntegrator(this);
+//        integrator.setPrompt("Scan A QR or Bar Code");
+//        integrator.setOrientationLocked(true);
+//        integrator.setCaptureActivity(PortraitCaptureActivity.class);
+//        integrator.setBeepEnabled(true);
+//        integrator.setBarcodeImageEnabled(true);
+//        integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
+//        integrator.initiateScan();
+//
+//    }
 
 
 
     private void startQRScanner(){
+
         IntentIntegrator integrator = new IntentIntegrator(this);
-        integrator.setPrompt("Scan A QR or Bar Code");
+        integrator.setPrompt("Align QR/Barcode inside the frame");
         integrator.setOrientationLocked(true);
         integrator.setCaptureActivity(PortraitCaptureActivity.class);
         integrator.setBeepEnabled(true);
-        integrator.setBarcodeImageEnabled(true);
-        integrator.setDesiredBarcodeFormats(IntentIntegrator.ALL_CODE_TYPES);
+
+        // ১. অপ্রয়োজনীয় ইমেজ সেভিং বন্ধ করুন (এটি স্ক্যানিং স্পিড বাড়াবে)
+        integrator.setBarcodeImageEnabled(false);
+
+        // ২. সব ফরম্যাট না খুঁজে শুধু প্রয়োজনীয় ফরম্যাটগুলো দিন
+        // QR_CODE এবং সাধারণ বারকোড (ONE_D_CODE_TYPES) দিলে স্ক্যানিং অনেক ফাস্ট হবে
+        //java.util.Collection<String> formats = new java.util.ArrayList<>();
+        //formats.add(IntentIntegrator.QR_CODE);
+        //formats.addAll(IntentIntegrator.ONE_D_CODE_TYPES);
+        integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
+        // ৩. অটোফোকাস আরও দ্রুত করার জন্য (ঐচ্ছিক)
+        integrator.addExtra("SCAN_MODE", "QR_CODE_MODE");
+        integrator.addExtra("SCAN_CAMERA_ID",0);
+        integrator.setTorchEnabled(false);
+
         integrator.initiateScan();
 
     }
