@@ -16,19 +16,22 @@
 
     <!-- [FIX] Play Store Policy & Higher Version Fix for Images -->
     <!-- Android 12 বা তার নিচের জন্য -->
-    <uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
+<!--    <uses-permission-->
+<!--        android:name="android.permission.READ_EXTERNAL_STORAGE"-->
+<!--        android:maxSdkVersion="32"
+            <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+/>-->
+
 
     <!-- Android 13 এবং তার উপরের জন্য (নতুন পলিসি অনুযায়ী) -->
-    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
 
     <!-- [IMPORTANT] নিশ্চিত করুন এখানে কোনো READ_CONTACTS পারমিশন নেই (গুগল এটি নিষিদ্ধ করেছে) -->
 
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher1"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -50,8 +53,14 @@
         <!-- [FIX] AdMob App ID (Caret position fixed here) -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
+            android:value="ca-app-pub-2173890419930461~2210293733"
+            />
 
+        <!--
+     Test ID: ca-app-pub-3940256099942544~3347511713
+
+     Real ID: ca-app-pub-2173890419930461~2210293733
+    -->
 
 
 

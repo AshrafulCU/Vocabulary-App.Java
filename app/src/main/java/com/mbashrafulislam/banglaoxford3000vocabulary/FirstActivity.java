@@ -45,29 +45,29 @@ public class FirstActivity extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         // For the status bar color and text white
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-            Window window = getWindow();
-            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.parseColor("#851E3E")); // set your desire color
-
-        }
-
-        // To make the text white
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            getWindow().setDecorFitsSystemWindows(false);
-        } else {
-            View decorView = getWindow().getDecorView();
-            decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-            );
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            // Ensure white icons by NOT using LIGHT_STATUS_BAR flag
-            getWindow().getDecorView().setSystemUiVisibility(0);
-        }
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+//            Window window = getWindow();
+//            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//            window.setStatusBarColor(Color.parseColor("#851E3E")); // set your desire color
+//
+//        }
+//
+//        // To make the text white
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+//            getWindow().setDecorFitsSystemWindows(false);
+//        } else {
+//            View decorView = getWindow().getDecorView();
+//            decorView.setSystemUiVisibility(
+//                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+//            );
+//        }
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//            // Ensure white icons by NOT using LIGHT_STATUS_BAR flag
+//            getWindow().getDecorView().setSystemUiVisibility(0);
+//        }
 
 
         vocabulary.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +76,10 @@ public class FirstActivity extends AppCompatActivity {
 
                 Intent vocabIntent = new Intent(FirstActivity.this, ButtonActivity.class);
                 startActivity(vocabIntent);
+
+                if (interstitialAd != null){
+                    interstitialAd.show(FirstActivity.this);
+                }
 
 
             }
@@ -88,6 +92,7 @@ public class FirstActivity extends AppCompatActivity {
 
                 Intent voiceIntent = new Intent(FirstActivity.this, TextToSpeechActivity.class);
                 startActivity(voiceIntent);
+
 
 
             }
@@ -134,7 +139,7 @@ public class FirstActivity extends AppCompatActivity {
 
         MobileAds.initialize(getApplicationContext());
         AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(getApplicationContext(), "ca-app-pub-3940256099942544/1033173712",
+        InterstitialAd.load(getApplicationContext(), " ca-app-pub-2173890419930461/8993075146 ",
 
              //Test Ad:   ca-app-pub-3940256099942544/1033173712
 
@@ -153,6 +158,10 @@ public class FirstActivity extends AppCompatActivity {
                         FirstActivity.this.interstitialAd = interstitialAd;
                         textScanner.setEnabled(true);
                         qRcodeScanner.setEnabled(true);
+                        ielts.setEnabled(true);
+                        vocabulary.setEnabled(true);
+                        //voicekeyboard.setEnabled(true);
+                        //Toast.makeText(getApplicationContext(), "Ad loaded", Toast.LENGTH_SHORT).show();
 
                     }
                 }

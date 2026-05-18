@@ -115,14 +115,10 @@ public class MainActivityPdfShower extends AppCompatActivity {
             }
         });
 
-
-
-
-
         //1. This officially blocks the screenshot (resulting in a black image)
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
 
-// 2. This detects the screenshot attempt ONLY when it happens
+        // 2. This detects the screenshot attempt ONLY when it happens
         getWindow().getDecorView().getViewTreeObserver().addOnWindowFocusChangeListener(new ViewTreeObserver.OnWindowFocusChangeListener() {
             @Override
             public void onWindowFocusChanged(boolean hasFocus) {
@@ -135,14 +131,12 @@ public class MainActivityPdfShower extends AppCompatActivity {
 
 
 
+
+
+
         applyDisplayCutouts();
 
-        // স্ট্যাটাস বার কালার সেটআপ
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            Window window = getWindow();
-//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-//            window.setStatusBarColor(Color.parseColor("#851E3E"));
-//        }
+
     }
 
     @Override
