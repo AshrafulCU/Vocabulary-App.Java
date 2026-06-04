@@ -12,13 +12,16 @@
 
     >
 
+
     <!-- UPDATED PDF VIEW -->
     <com.rajat.pdfviewer.PdfRendererView
         android:id="@+id/pdfView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/adLayout"
-        android:layout_marginBottom="5dp" />
+        android:layout_marginBottom="5dp"
+
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,8 +37,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            app:adSize="SMART_BANNER"
-            app:adUnitId=" ca-app-pub-2173890419930461/8374890792 " />
+            app:adSize="LARGE_BANNER"
+            app:adUnitId="ca-app-pub-2173890419930461/8374890792"
+            />
 
 
         <!--

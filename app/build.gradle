@@ -11,8 +11,8 @@ android {
         applicationId "com.mbashrafulislam.banglaoxford3000vocabulary"
         minSdk 24
         targetSdk 36
-        versionCode 28
-        versionName "3.9"
+        versionCode 29
+        versionName "3.10"
 
         // for 16 KB alignment
         ndkVersion "30.0.14904198"
@@ -104,6 +104,13 @@ dependencies {
 
     //Edge to edge
     implementation 'androidx.activity:activity:1.13.0'
+
+
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+
+
+
+
 
 
 

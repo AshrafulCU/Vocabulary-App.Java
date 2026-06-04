@@ -2,15 +2,22 @@ package com.mbashrafulislam.banglaoxford3000vocabulary;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -19,13 +26,15 @@ import com.airbnb.lottie.LottieAnimationView;
 
 public class ButtonActivity extends AppCompatActivity {
 
-    Button aButton,bButton,cButton,dButton,eButton,fButton,gButton,hButton,
-            iButton,jklButton,mButton,motivationButton,noButton,pButton,qrButton,
-            sButton,tButton,uButton,vButton,wyzButton;
 
+CardView cambridge11_reading,cambridge12_reading,cambridge13_reading,cambridge14_reading,
+        cambridge15_reading,cambridge16_reading,cambridge17_reading,cambridge18_reading,
+        cambridge19_reading,cambridge20_reading;
 
-    LottieAnimationView lottieMic;
+CardView cambridge11_test1_reading,cambridge11_test2_reading,cambridge11_test3_reading, cambridge11_test4_reading,
+        cambridge12_test1_reading,cambridge12_test2_reading,cambridge12_test3_reading, cambridge12_test4_reading;
 
+LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_subsections;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,311 +43,269 @@ public class ButtonActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_button);
 
-        aButton = findViewById(R.id.aButton);
-        bButton = findViewById(R.id.bButton);
-        cButton = findViewById(R.id.cButton);
-        dButton = findViewById(R.id.dButton);
-        eButton = findViewById(R.id.eButton);
-        fButton = findViewById(R.id.fButton);
-        gButton = findViewById(R.id.gButton);
-        hButton = findViewById(R.id.hButton);
-        iButton = findViewById(R.id.iButton);
-        jklButton = findViewById(R.id.jklButton);
-        mButton = findViewById(R.id.mButton);
-        motivationButton = findViewById(R.id.motivationButton);
-        noButton = findViewById(R.id.noButton);
-        pButton = findViewById(R.id.pButton);
-        qrButton = findViewById(R.id.qrButton);
-        sButton = findViewById(R.id.sButton);
-        tButton = findViewById(R.id.tButton);
-        uButton = findViewById(R.id.uButton);
-        vButton = findViewById(R.id.vButton);
-        wyzButton = findViewById(R.id.wyzButton);
+        cambridge11_reading=findViewById(R.id.cambridge11_reading);
+        cambridge12_reading=findViewById(R.id.cambridge12_reading);
+        cambridge13_reading=findViewById(R.id.cambridge13_reading);
+        cambridge14_reading=findViewById(R.id.cambridge14_reading);
+        cambridge15_reading=findViewById(R.id.cambridge15_reading);
+        cambridge16_reading=findViewById(R.id.cambridge16_reading);
+        cambridge17_reading=findViewById(R.id.cambridge17_reading);
+        cambridge18_reading=findViewById(R.id.cambridge18_reading);
+        cambridge19_reading=findViewById(R.id.cambridge19_reading);
+        cambridge20_reading=findViewById(R.id.cambridge20_reading);
 
-        lottieMic = findViewById(R.id.lottieMic);
+        cambridge11_linearlayout_subsections=findViewById(R.id.cambridge11_linearlayout_subsections);
+        cambridge12_linearlayout_subsections=findViewById(R.id.cambridge12_linearlayout_subsections);
 
 
+        cambridge11_test1_reading=findViewById(R.id.cambridge11_test1_reading);
+        cambridge11_test2_reading = findViewById(R.id.cambridge11_test2_reading);
+        cambridge11_test3_reading = findViewById(R.id.cambridge11_test3_reading);
+        cambridge11_test4_reading = findViewById(R.id.cambridge11_test4_reading);
+        cambridge12_test1_reading = findViewById(R.id.cambridge12_test1_reading);
+        cambridge12_test2_reading = findViewById(R.id.cambridge12_test2_reading);
+        cambridge12_test3_reading = findViewById(R.id.cambridge12_test3_reading);
+        cambridge12_test4_reading = findViewById(R.id.cambridge12_test4_reading);
 
-        lottieMic.setOnClickListener(new View.OnClickListener() {
+
+
+
+
+
+
+
+        cambridge11_reading.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                Intent myIntent = new Intent(ButtonActivity.this,TextToSpeechActivity.class);
-                startActivity( myIntent );
+                if (!isInternetAvailable()) {
+                    showNoInternetDialog();
+                    return;
+                }
+                if (cambridge11_linearlayout_subsections.getVisibility() == View.GONE) {
+                    cambridge11_linearlayout_subsections.setVisibility(View.VISIBLE);
+                } else {
+                    cambridge11_linearlayout_subsections.setVisibility(View.GONE);
+                }
             }
         });
 
-
-
-        aButton.setOnClickListener(new View.OnClickListener() {
+        cambridge11_test1_reading.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                MainActivityPdfShower.myString = "a.pdf";
-
+//                MainActivityPdfShower.myString = "reading_cambridge11.pdf";
+//                Intent aIntent = new Intent(ButtonActivity.this,
+//                        MainActivityPdfShower.class);
+//                startActivity(aIntent);
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge11_test1.pdf";
                 Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
                 startActivity(aIntent);
 
             }
         });
 
-        bButton.setOnClickListener(new View.OnClickListener() {
+        cambridge11_test2_reading.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                MainActivityPdfShower.myString = "b.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge11_test2.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
                 startActivity(aIntent);
 
             }
         });
 
-        cButton.setOnClickListener(new View.OnClickListener() {
+        cambridge11_test3_reading.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                MainActivityPdfShower.myString = "c.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        dButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "d.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        eButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "e.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        fButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "f.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        gButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "g.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        hButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "h.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        iButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "i.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        jklButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "jkl.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "m.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        motivationButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "motivation.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        noButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "no.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        pButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "p.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        qrButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "qr.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
-                startActivity(aIntent);
-
-            }
-        });
-        sButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "s.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge11_test3.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
                 startActivity(aIntent);
 
             }
         });
 
-        tButton.setOnClickListener(new View.OnClickListener() {
+        cambridge11_test4_reading.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                MainActivityPdfShower.myString = "t.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge11_test4.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
                 startActivity(aIntent);
 
             }
         });
 
-        uButton.setOnClickListener(new View.OnClickListener() {
+
+
+        cambridge12_reading.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                MainActivityPdfShower.myString = "u.pdf";
+                if (!isInternetAvailable()) {
+                    showNoInternetDialog();
+                    return;
+                }
+                if (cambridge12_linearlayout_subsections.getVisibility() == View.GONE) {
+                    cambridge12_linearlayout_subsections.setVisibility(View.VISIBLE);
+                } else {
+                    cambridge12_linearlayout_subsections.setVisibility(View.GONE);
+                }
 
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
+            }
+        });
+        cambridge12_test1_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge12_test1.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
                 startActivity(aIntent);
 
             }
         });
-        vButton.setOnClickListener(new View.OnClickListener() {
+        cambridge12_test2_reading.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "v.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge12_test2.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
                 startActivity(aIntent);
 
             }
         });
-        wyzButton.setOnClickListener(new View.OnClickListener() {
+        cambridge12_test3_reading.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                MainActivityPdfShower.myString = "wyz.pdf";
-
-                Intent aIntent = new Intent(ButtonActivity.this,
-                        MainActivityPdfShower.class);
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge12_test3.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
                 startActivity(aIntent);
 
             }
         });
+        cambridge12_test4_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge12_test4.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+
+
+
+      cambridge13_reading.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+
+              if (!isInternetAvailable()) {
+                  showNoInternetDialog();
+                  return;
+              }
+              Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+
+
+          }
+      });
+
+        cambridge14_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!isInternetAvailable()) {
+                    showNoInternetDialog();
+                    return;
+                }
+                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        cambridge15_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!isInternetAvailable()) {
+                    showNoInternetDialog();
+                    return;
+                }
+                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        cambridge16_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!isInternetAvailable()) {
+                    showNoInternetDialog();
+                    return;
+                }
+                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        cambridge17_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!isInternetAvailable()) {
+                    showNoInternetDialog();
+                    return;
+                }
+                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        cambridge18_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!isInternetAvailable()) {
+                    showNoInternetDialog();
+                    return;
+                }
+                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        cambridge19_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!isInternetAvailable()) {
+                    showNoInternetDialog();
+                    return;
+                }
+                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        cambridge20_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!isInternetAvailable()) {
+                    showNoInternetDialog();
+                    return;
+                }
+                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+            }
+        });
+
+
 
         // To edge to edge
         applyDisplayCutouts();
 
-        // to make the status bar color and text to color due to edge to edge
-//
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-//            Window window = getWindow();
-//            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-//            window.setStatusBarColor(Color.parseColor("#851E3E")); // Set your desired color
-//        }
-//
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-//            getWindow().setDecorFitsSystemWindows(false);
-//        } else {
-//            View decorView = getWindow().getDecorView();
-//            decorView.setSystemUiVisibility(
-//                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-//            );
-//        }
-//
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//            // Ensure white icons by NOT using LIGHT_STATUS_BAR flag
-//            getWindow().getDecorView().setSystemUiVisibility(0);
-//        }
 
 
 
@@ -352,6 +319,41 @@ public class ButtonActivity extends AppCompatActivity {
             v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
             return WindowInsetsCompat.CONSUMED;
         });
+    }
+
+    private boolean isInternetAvailable() {
+
+        ConnectivityManager connectivityManager =
+                (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
+
+        if (connectivityManager != null) {
+
+            Network network = connectivityManager.getActiveNetwork();
+
+            if (network == null) {
+                return false;
+            }
+
+            NetworkCapabilities capabilities =
+                    connectivityManager.getNetworkCapabilities(network);
+
+            return capabilities != null &&
+                    (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
+                            || capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)
+                            || capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET));
+        }
+
+        return false;
+    }
+
+    private void showNoInternetDialog() {
+
+        new AlertDialog.Builder(this)
+                .setTitle("No Internet Connection")
+                .setMessage("Please check your internet connection and try again.")
+                .setIcon(R.drawable.alerticon) // optional
+                .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
+                .show();
     }
 
 

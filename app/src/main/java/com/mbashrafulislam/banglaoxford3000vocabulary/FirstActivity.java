@@ -137,42 +137,54 @@ public class FirstActivity extends AppCompatActivity {
         });
 
 
-        MobileAds.initialize(getApplicationContext());
-        AdRequest adRequest = new AdRequest.Builder().build();
-        InterstitialAd.load(getApplicationContext(), " ca-app-pub-2173890419930461/8993075146 ",
+        //MobileAds.initialize(getApplicationContext());
+        MobileAds.initialize(this, initializationStatus -> {
+            loadMyInterstitialAd();
 
-             //Test Ad:   ca-app-pub-3940256099942544/1033173712
-
-                //Real Ad Unit:   ca-app-pub-2173890419930461/8993075146
-                adRequest, new InterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        super.onAdFailedToLoad(loadAdError);
-                        interstitialAd =null;
-                        Toast.makeText(getApplicationContext(), "Ad failed to load", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                        super.onAdLoaded(interstitialAd);
-                        FirstActivity.this.interstitialAd = interstitialAd;
-                        textScanner.setEnabled(true);
-                        qRcodeScanner.setEnabled(true);
-                        ielts.setEnabled(true);
-                        vocabulary.setEnabled(true);
-                        //voicekeyboard.setEnabled(true);
-                        //Toast.makeText(getApplicationContext(), "Ad loaded", Toast.LENGTH_SHORT).show();
-
-                    }
-                }
-
-        );
+        });
 
 
         applyDisplayCutouts();
 
 
 
+    }
+
+    // ২. ইন্টারস্টিশিয়াল অ্যাড লোড করার জন্য আলাদা মেথড
+    private void loadMyInterstitialAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        // এখানে আমি সব স্পেস এবং ভুল অক্ষর সরিয়ে একদম ফ্রেশ টেস্ট আইডি দিয়েছি
+        String adUnitId = "ca-app-pub-2173890419930461/8993075146";
+
+        //Test Ad: ca-app-pub-3940256099942544/1033173712
+
+        // Real Ad: ca-app-pub-2173890419930461/8993075146
+
+        InterstitialAd.load(this, adUnitId, adRequest,
+                new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd ad) {
+                        interstitialAd = ad;
+
+                        // অ্যাড লোড হলে বাটনগুলো এনাবল করে দিন
+                        textScanner.setEnabled(true);
+                        qRcodeScanner.setEnabled(true);
+                        ielts.setEnabled(true);
+                        vocabulary.setEnabled(true);
+
+                        //Toast.makeText(FirstActivity.this, "Ad Loaded", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        interstitialAd = null;
+                        // কেন অ্যাড লোড হলো না তা টোস্টে দেখা যাবে (যেমন Code 3 মানে No Fill)
+                        //Toast.makeText(FirstActivity.this, "Ad Failed: " + loadAdError.getMessage(), Toast.LENGTH_LONG).show();
+
+                        Toast.makeText(FirstActivity.this, "Ad Failed:", Toast.LENGTH_LONG).show();
+                    }
+                });
     }
 
 
