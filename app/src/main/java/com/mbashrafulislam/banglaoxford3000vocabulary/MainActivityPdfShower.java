@@ -104,7 +104,7 @@
             AdRequest adRequest = new AdRequest.Builder().build();
 
             // এখানে টেস্ট আইডি দেওয়া হয়েছে
-            InterstitialAd.load(this, "ca-app-pub-2173890419930461/4961551788", adRequest,
+            InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest,
 
                     // Test Ad: ca-app-pub-3940256099942544/1033173712
 

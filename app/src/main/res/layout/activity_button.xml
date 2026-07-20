@@ -385,6 +385,8 @@
 
             <!-- Cambridge Reading 12 End  -->
 
+            <!-- Cambridge Reading 13 Start  -->
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -423,6 +425,136 @@
 
 
             </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:id="@+id/cambridge13_linearlayout_subsections"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge13_test1_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 13: Test 1 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge13_test2_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 13: Test 2 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge13_test3_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 13: Test 3 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/cambridge13_test4_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 13: Test 4 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <!-- Cambridge Reading 13 End  -->
+
+            <!-- Cambridge Reading 14 Start  -->
+
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -462,6 +594,134 @@
 
 
             </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:id="@+id/cambridge14_linearlayout_subsections"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge14_test1_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 14: Test 1 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge14_test2_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 14: Test 2 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge14_test3_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 14: Test 3 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/cambridge14_test4_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 14: Test 4 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <!-- Cambridge Reading 14 End   -->
+
+            <!-- Cambridge Reading 15 Start  -->
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -499,6 +759,136 @@
 
 
             </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:id="@+id/cambridge15_linearlayout_subsections"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge15_test1_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 15: Test 1 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge15_test2_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 15: Test 2 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge15_test3_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 15: Test 3 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/cambridge15_test4_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 15: Test 4 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+            <!-- Cambridge Reading 15 End  -->
+
+
+            <!-- Cambridge Reading 16 Start  -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -536,6 +926,134 @@
 
 
             </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:id="@+id/cambridge16_linearlayout_subsections"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge16_test1_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 16: Test 1 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge16_test2_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 16: Test 2 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge16_test3_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 16: Test 3 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/cambridge16_test4_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 16: Test 4 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+            <!-- Cambridge Reading 16 End   -->
+
+            <!-- Cambridge Reading 17 Start  -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -573,6 +1091,134 @@
 
 
             </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:id="@+id/cambridge17_linearlayout_subsections"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge17_test1_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 17: Test 1 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge17_test2_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 17: Test 2 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge17_test3_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 17: Test 3 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/cambridge17_test4_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 17: Test 4 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+            <!-- Cambridge Reading 17 End  -->
+
+            <!-- Cambridge Reading 18 Start  -->
+
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -610,6 +1256,133 @@
 
 
             </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:id="@+id/cambridge18_linearlayout_subsections"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge18_test1_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 18: Test 1 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge18_test2_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 18: Test 2 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge18_test3_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 18: Test 3 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/cambridge18_test4_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 18: Test 4 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <!-- Cambridge Reading 18 End  -->
+
+            <!-- Cambridge Reading 19 Start  -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -647,6 +1420,133 @@
 
 
             </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:id="@+id/cambridge19_linearlayout_subsections"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge19_test1_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 19: Test 1 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge19_test2_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 19: Test 2 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge19_test3_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 19: Test 3 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/cambridge19_test4_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 19: Test 4 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <!-- Cambridge Reading 19 End  -->
+
+            <!-- Cambridge Reading 20 Start  -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
@@ -660,7 +1560,7 @@
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:id="@+id/cambridge20_reading"
-                android:layout_below="@+id/cambridge19_reading"
+
 
                 >
                 <LinearLayout
@@ -685,6 +1585,131 @@
 
 
             </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:id="@+id/cambridge20_linearlayout_subsections"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge20_test1_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 20: Test 1 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge20_test2_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 20: Test 2 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:id="@+id/cambridge20_test3_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 20: Test 3 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    app:cardElevation="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/cambridge20_test4_reading"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="Cambridge 20: Test 4 "
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <!-- Cambridge Reading 20 End  -->
 
         </LinearLayout>
 

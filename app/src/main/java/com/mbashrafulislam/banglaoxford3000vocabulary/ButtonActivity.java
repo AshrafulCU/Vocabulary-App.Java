@@ -32,9 +32,23 @@ CardView cambridge11_reading,cambridge12_reading,cambridge13_reading,cambridge14
         cambridge19_reading,cambridge20_reading;
 
 CardView cambridge11_test1_reading,cambridge11_test2_reading,cambridge11_test3_reading, cambridge11_test4_reading,
-        cambridge12_test1_reading,cambridge12_test2_reading,cambridge12_test3_reading, cambridge12_test4_reading;
+        cambridge12_test1_reading,cambridge12_test2_reading,cambridge12_test3_reading, cambridge12_test4_reading,
+        cambridge13_test1_reading,cambridge13_test2_reading,cambridge13_test3_reading, cambridge13_test4_reading,
+        cambridge14_test1_reading,cambridge14_test2_reading,cambridge14_test3_reading, cambridge14_test4_reading,
+        cambridge15_test1_reading,cambridge15_test2_reading,cambridge15_test3_reading, cambridge15_test4_reading,
+        cambridge16_test1_reading,cambridge16_test2_reading,cambridge16_test3_reading, cambridge16_test4_reading,
+        cambridge17_test1_reading,cambridge17_test2_reading,cambridge17_test3_reading, cambridge17_test4_reading,
+        cambridge18_test1_reading,cambridge18_test2_reading,cambridge18_test3_reading, cambridge18_test4_reading,
+        cambridge19_test1_reading,cambridge19_test2_reading,cambridge19_test3_reading, cambridge19_test4_reading,
+        cambridge20_test1_reading,cambridge20_test2_reading,cambridge20_test3_reading, cambridge20_test4_reading;
 
-LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_subsections;
+
+
+
+LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_subsections, cambaridge13_linearlayout_subsections,
+        cambridge14_linearlayout_subsections, cambridge15_linearlayout_subsections,cambridge16_linearlayout_subsections,
+        cambridge17_linearlayout_subsections, cambridge18_linearlayout_subsections, cambridge19_linearlayout_subsections,
+        cambridge20_linearlayout_subsections;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,16 +70,66 @@ LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_sub
 
         cambridge11_linearlayout_subsections=findViewById(R.id.cambridge11_linearlayout_subsections);
         cambridge12_linearlayout_subsections=findViewById(R.id.cambridge12_linearlayout_subsections);
+        cambaridge13_linearlayout_subsections=findViewById(R.id.cambridge13_linearlayout_subsections);
+        cambridge14_linearlayout_subsections=findViewById(R.id.cambridge14_linearlayout_subsections);
+        cambridge15_linearlayout_subsections=findViewById(R.id.cambridge15_linearlayout_subsections);
+        cambridge16_linearlayout_subsections=findViewById(R.id.cambridge16_linearlayout_subsections);
+        cambridge17_linearlayout_subsections=findViewById(R.id.cambridge17_linearlayout_subsections);
+        cambridge18_linearlayout_subsections=findViewById(R.id.cambridge18_linearlayout_subsections);
+        cambridge19_linearlayout_subsections=findViewById(R.id.cambridge19_linearlayout_subsections);
+        cambridge20_linearlayout_subsections=findViewById(R.id.cambridge20_linearlayout_subsections);
 
 
         cambridge11_test1_reading=findViewById(R.id.cambridge11_test1_reading);
         cambridge11_test2_reading = findViewById(R.id.cambridge11_test2_reading);
         cambridge11_test3_reading = findViewById(R.id.cambridge11_test3_reading);
         cambridge11_test4_reading = findViewById(R.id.cambridge11_test4_reading);
+
         cambridge12_test1_reading = findViewById(R.id.cambridge12_test1_reading);
         cambridge12_test2_reading = findViewById(R.id.cambridge12_test2_reading);
         cambridge12_test3_reading = findViewById(R.id.cambridge12_test3_reading);
         cambridge12_test4_reading = findViewById(R.id.cambridge12_test4_reading);
+
+        cambridge13_test1_reading = findViewById(R.id.cambridge13_test1_reading);
+        cambridge13_test2_reading = findViewById(R.id.cambridge13_test2_reading);
+        cambridge13_test3_reading = findViewById(R.id.cambridge13_test3_reading);
+        cambridge13_test4_reading = findViewById(R.id.cambridge13_test4_reading);
+
+        cambridge14_test1_reading = findViewById(R.id.cambridge14_test1_reading);
+        cambridge14_test2_reading = findViewById(R.id.cambridge14_test2_reading);
+        cambridge14_test3_reading = findViewById(R.id.cambridge14_test3_reading);
+        cambridge14_test4_reading = findViewById(R.id.cambridge14_test4_reading);
+
+        cambridge15_test1_reading = findViewById(R.id.cambridge15_test1_reading);
+        cambridge15_test2_reading = findViewById(R.id.cambridge15_test2_reading);
+        cambridge15_test3_reading = findViewById(R.id.cambridge15_test3_reading);
+        cambridge15_test4_reading = findViewById(R.id.cambridge15_test4_reading);
+
+        cambridge16_test1_reading = findViewById(R.id.cambridge16_test1_reading);
+        cambridge16_test2_reading = findViewById(R.id.cambridge16_test2_reading);
+        cambridge16_test3_reading = findViewById(R.id.cambridge16_test3_reading);
+        cambridge16_test4_reading = findViewById(R.id.cambridge16_test4_reading);
+
+        cambridge17_test1_reading = findViewById(R.id.cambridge17_test1_reading);
+        cambridge17_test2_reading = findViewById(R.id.cambridge17_test2_reading);
+        cambridge17_test3_reading = findViewById(R.id.cambridge17_test3_reading);
+        cambridge17_test4_reading = findViewById(R.id.cambridge17_test4_reading);
+
+        cambridge18_test1_reading = findViewById(R.id.cambridge18_test1_reading);
+        cambridge18_test2_reading = findViewById(R.id.cambridge18_test2_reading);
+        cambridge18_test3_reading = findViewById(R.id.cambridge18_test3_reading);
+        cambridge18_test4_reading = findViewById(R.id.cambridge18_test4_reading);
+
+        cambridge19_test1_reading = findViewById(R.id.cambridge19_test1_reading);
+        cambridge19_test2_reading = findViewById(R.id.cambridge19_test2_reading);
+        cambridge19_test3_reading = findViewById(R.id.cambridge19_test3_reading);
+        cambridge19_test4_reading = findViewById(R.id.cambridge19_test4_reading);
+
+        cambridge20_test1_reading = findViewById(R.id.cambridge20_test1_reading);
+        cambridge20_test2_reading = findViewById(R.id.cambridge20_test2_reading);
+        cambridge20_test3_reading = findViewById(R.id.cambridge20_test3_reading);
+        cambridge20_test4_reading = findViewById(R.id.cambridge20_test4_reading);
+
 
 
 
@@ -203,7 +267,7 @@ LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_sub
 
 
 
-      cambridge13_reading.setOnClickListener(new View.OnClickListener() {
+        cambridge13_reading.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
 
@@ -211,11 +275,59 @@ LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_sub
                   showNoInternetDialog();
                   return;
               }
-              Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+              if (cambaridge13_linearlayout_subsections.getVisibility() == View.GONE) {
+                  cambaridge13_linearlayout_subsections.setVisibility(View.VISIBLE);
+              } else {
+                cambaridge13_linearlayout_subsections.setVisibility(View.GONE);
+              }
+
 
 
           }
       });
+        cambridge13_test1_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge13_test1.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+
+        cambridge13_test2_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge13_test2.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge13_test3_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge13_test3.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge13_test4_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge13_test4.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+
+
 
         cambridge14_reading.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -225,21 +337,119 @@ LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_sub
                     showNoInternetDialog();
                     return;
                 }
-                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+                if (cambridge14_linearlayout_subsections.getVisibility() == View.GONE) {
+                    cambridge14_linearlayout_subsections.setVisibility(View.VISIBLE);
+                } else {
+                    cambridge14_linearlayout_subsections.setVisibility(View.GONE);
+                }
             }
         });
+
+        cambridge14_test1_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge14_test1.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+
+        cambridge14_test2_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge14_test2.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge14_test3_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge14_test3.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge14_test4_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge14_test4.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+
+
+
+
 
         cambridge15_reading.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (!isInternetAvailable()) {
                     showNoInternetDialog();
                     return;
                 }
-                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+                if (cambridge15_linearlayout_subsections.getVisibility() == View.GONE) {
+                    cambridge15_linearlayout_subsections.setVisibility(View.VISIBLE);
+                } else {
+                    cambridge15_linearlayout_subsections.setVisibility(View.GONE);
+                }
+
             }
         });
+
+        cambridge15_test1_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge15_test1.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge15_test2_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge15_test2.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge15_test3_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge15_test3.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge15_test4_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge15_test4.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+
+
+
 
         cambridge16_reading.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -249,9 +459,57 @@ LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_sub
                     showNoInternetDialog();
                     return;
                 }
-                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+                if (cambridge16_linearlayout_subsections.getVisibility() == View.GONE) {
+                    cambridge16_linearlayout_subsections.setVisibility(View.VISIBLE);
+                } else {
+                    cambridge16_linearlayout_subsections.setVisibility(View.GONE);
+                }
+
+
             }
         });
+        cambridge16_test1_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge16_test1.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge16_test2_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge16_test2.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge16_test3_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge16_test3.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge16_test4_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge16_test4.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+
+
 
         cambridge17_reading.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -261,9 +519,56 @@ LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_sub
                     showNoInternetDialog();
                     return;
                 }
-                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+                if (cambridge17_linearlayout_subsections.getVisibility() == View.GONE) {
+                    cambridge17_linearlayout_subsections.setVisibility(View.VISIBLE);
+                } else {
+                    cambridge17_linearlayout_subsections.setVisibility(View.GONE);
+                }
             }
         });
+        cambridge17_test1_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge17_test1.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge17_test2_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge17_test2.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge17_test3_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge17_test3.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge17_test4_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge17_test4.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+
+
+
 
         cambridge18_reading.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -273,9 +578,56 @@ LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_sub
                     showNoInternetDialog();
                     return;
                 }
-                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+                if (cambridge18_linearlayout_subsections.getVisibility() == View.GONE) {
+                    cambridge18_linearlayout_subsections.setVisibility(View.VISIBLE);
+                } else {
+                    cambridge18_linearlayout_subsections.setVisibility(View.GONE);
+                }
+
             }
         });
+        cambridge18_test1_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge18_test1.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge18_test2_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge18_test2.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge18_test3_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge18_test3.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge18_test4_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge18_test4.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+
+
 
         cambridge19_reading.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -285,9 +637,57 @@ LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_sub
                     showNoInternetDialog();
                     return;
                 }
-                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+                if (cambridge19_linearlayout_subsections.getVisibility() == View.GONE) {
+                    cambridge19_linearlayout_subsections.setVisibility(View.VISIBLE);
+                } else {
+                    cambridge19_linearlayout_subsections.setVisibility(View.GONE);
+                }
+
             }
         });
+        cambridge19_test1_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge19_test1.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge19_test2_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge19_test2.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge19_test3_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge19_test3.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge19_test4_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge19_test4.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+
+
+
 
         cambridge20_reading.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -297,7 +697,51 @@ LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_sub
                     showNoInternetDialog();
                     return;
                 }
-                Toast.makeText(ButtonActivity.this, "We are updating this feature. Thank you for your Patience.", Toast.LENGTH_LONG).show();
+                if (cambridge20_linearlayout_subsections.getVisibility() == View.GONE) {
+                    cambridge20_linearlayout_subsections.setVisibility(View.VISIBLE);
+                } else {
+                    cambridge20_linearlayout_subsections.setVisibility(View.GONE);
+                }
+            }
+        });
+        cambridge20_test1_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge20_test1.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge20_test2_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge20_test2.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge20_test3_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge20_test3.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
+            }
+        });
+        cambridge20_test4_reading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivityPdfShower.myString
+                        = "https://github.com/AshrafulCU/IELTS-PDFs/releases/download/v1.0/reading_cambridge20_test4.pdf";
+                Intent aIntent = new Intent(ButtonActivity.this, MainActivityPdfShower.class);
+                startActivity(aIntent);
+
             }
         });
 

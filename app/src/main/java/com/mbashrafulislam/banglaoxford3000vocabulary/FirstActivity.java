@@ -155,7 +155,7 @@ public class FirstActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
 
         // এখানে আমি সব স্পেস এবং ভুল অক্ষর সরিয়ে একদম ফ্রেশ টেস্ট আইডি দিয়েছি
-        String adUnitId = "ca-app-pub-2173890419930461/8993075146";
+        String adUnitId = "ca-app-pub-3940256099942544/1033173712";
 
         //Test Ad: ca-app-pub-3940256099942544/1033173712
 
