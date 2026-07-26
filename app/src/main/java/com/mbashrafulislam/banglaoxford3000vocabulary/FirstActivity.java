@@ -27,7 +27,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 public class FirstActivity extends AppCompatActivity {
 
 
-    CardView vocabulary, voicekeyboard, textScanner, qRcodeScanner,ielts;
+    CardView vocabulary, voicekeyboard, textScanner, qRcodeScanner,ielts, freefree_mock_test_cardView;
     private InterstitialAd interstitialAd;
 
     @Override
@@ -41,6 +41,7 @@ public class FirstActivity extends AppCompatActivity {
         textScanner = findViewById(R.id.textScannerCardView);
         qRcodeScanner = findViewById(R.id.qRcodeScanner);
         ielts = findViewById(R.id.ielts_cardView);
+        freefree_mock_test_cardView = findViewById(R.id.free_mock_test_cardView);
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
@@ -69,6 +70,19 @@ public class FirstActivity extends AppCompatActivity {
 //            getWindow().getDecorView().setSystemUiVisibility(0);
 //        }
 
+        freefree_mock_test_cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent freeIeltsMockTestIntent = new Intent(FirstActivity.this, Free_IELTS_Mock_Test.class);
+                startActivity(freeIeltsMockTestIntent);
+
+                if (interstitialAd != null){
+                    interstitialAd.show(FirstActivity.this);
+                }
+
+            }
+        });
 
         vocabulary.setOnClickListener(new View.OnClickListener() {
             @Override
