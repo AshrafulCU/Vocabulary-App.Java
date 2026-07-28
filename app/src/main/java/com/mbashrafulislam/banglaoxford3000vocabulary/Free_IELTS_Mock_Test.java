@@ -9,9 +9,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.LoadAdError;
@@ -32,6 +36,7 @@ public class Free_IELTS_Mock_Test extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_free_ielts_mock_test);
 
@@ -69,6 +74,10 @@ public class Free_IELTS_Mock_Test extends AppCompatActivity {
                     "Please provide payment instructions (BKash/Nagad/Rocket/GPay).";
             sendToWhatsApp(message);
         });
+
+        applyDisplayCutouts();
+
+
 
     }   // last second baracket
 
@@ -139,7 +148,7 @@ public class Free_IELTS_Mock_Test extends AppCompatActivity {
                 loadRewardedAd();
             });
         } else {
-            Toast.makeText(this, "Ad is loading, please try again in 5 seconds.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Ad is loading, please try again in 5 seconds.", Toast.LENGTH_LONG).show();
             loadRewardedAd();
         }
     }
@@ -152,14 +161,29 @@ public class Free_IELTS_Mock_Test extends AppCompatActivity {
         }
     }
 
-    private void showSuccessDialog(String msg, int testNum) {
-        new AlertDialog.Builder(this)
-                .setTitle("Test Unlocked!")
-                .setMessage(msg)
-                .setPositiveButton("Book via WhatsApp", (dialog, which) -> openWhatsAppForBooking(testNum))
-                .setNegativeButton("Later", null)
-                .show();
-    }
+//    private void showSuccessDialog(String msg, int testNum) {
+//        new AlertDialog.Builder(this)
+//                .setTitle("Test Unlocked!")
+//                .setMessage(msg)
+//                .setPositiveButton("Book via WhatsApp", (dialog, which) -> openWhatsAppForBooking(testNum))
+//                .setNegativeButton("Later", null)
+//                .show();
+//
+//    }
+private void showSuccessDialog(String msg, int testNum) {
+    new AlertDialog.Builder(this)
+            .setTitle("Test Unlocked!")
+            .setMessage(msg)
+            .setCancelable(false) // এটি যোগ করলে ডায়ালগের বাইরে ক্লিক করলে বন্ধ হবে না
+            .setPositiveButton("Book via WhatsApp", (dialog, which) -> {
+                openWhatsAppForBooking(testNum);
+                dialog.dismiss(); // হোয়াটসঅ্যাপ ওপেন হওয়ার পর ডায়ালগ বন্ধ হবে
+            })
+            .setNegativeButton("Later", (dialog, which) -> {
+                dialog.dismiss(); // 'Later' বাটনে ক্লিক করলে তবেই বন্ধ হবে
+            })
+            .show();
+}
 
     private void openWhatsAppForBooking(int testNumber) {
         String androidId = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
@@ -185,7 +209,7 @@ public class Free_IELTS_Mock_Test extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         } catch (Exception e) {
-            Toast.makeText(this, "WhatsApp is not installed!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "WhatsApp is not installed!", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -201,6 +225,11 @@ public class Free_IELTS_Mock_Test extends AppCompatActivity {
     private void loadRewardedAd() {
         AdRequest adRequest = new AdRequest.Builder().build();
         RewardedAd.load(this, "ca-app-pub-3940256099942544/5224354917",
+
+                // Test ID:  ca-app-pub-3940256099942544/5224354917
+
+                // Real ID: ca-app-pub-2173890419930461/4413185001
+
                 adRequest, new RewardedAdLoadCallback() {
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
@@ -212,4 +241,18 @@ public class Free_IELTS_Mock_Test extends AppCompatActivity {
                     }
                 });
     }
+
+
+    private void applyDisplayCutouts() {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.free_ielts_mockTest_layout), (v, insets) -> {
+            Insets bars = insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars()
+                            | WindowInsetsCompat.Type.displayCutout()
+            );
+            v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            return WindowInsetsCompat.CONSUMED;
+        });
+    }
+
+
 }

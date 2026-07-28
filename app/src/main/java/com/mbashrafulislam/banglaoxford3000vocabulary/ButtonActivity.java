@@ -699,9 +699,12 @@ LinearLayout cambridge11_linearlayout_subsections,  cambridge12_linearlayout_sub
                 }
                 if (cambridge20_linearlayout_subsections.getVisibility() == View.GONE) {
                     cambridge20_linearlayout_subsections.setVisibility(View.VISIBLE);
+                    Toast.makeText(ButtonActivity.this, "Please scroll up to show the answers for Cambridge Reading Test 20.", Toast.LENGTH_LONG ).show();
+
                 } else {
                     cambridge20_linearlayout_subsections.setVisibility(View.GONE);
                 }
+
             }
         });
         cambridge20_test1_reading.setOnClickListener(new View.OnClickListener() {
