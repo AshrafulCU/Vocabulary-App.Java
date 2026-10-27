@@ -68,6 +68,10 @@
             android:resizeableActivity="true"
             android:theme="@style/zxing_CaptureTheme"
             tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ListeningAnswerExplanationCambridge"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

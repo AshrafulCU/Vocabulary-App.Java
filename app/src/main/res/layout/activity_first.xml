@@ -177,7 +177,10 @@
 
 
         </androidx.cardview.widget.CardView>
+
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/listening_answer_explanation_cardView"
             android:layout_width="150dp"
             android:layout_height="150dp"
             app:cardCornerRadius="15dp"
@@ -186,7 +189,6 @@
             android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
             app:cardElevation="15dp"
-            android:id="@+id/qRcodeScanner"
 
             >
             <LinearLayout
@@ -196,25 +198,30 @@
                 android:gravity="center"
                 >
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:src="@drawable/qr_scanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/listening_answer_explanation"
                     android:layout_gravity="center_horizontal"
+                    android:padding="20dp"
+
 
                     />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="QR Scanner"
-                    android:textSize="20sp"
-                    android:textColor="#851E3E"
-                    android:textStyle="bold"
-                    android:layout_gravity="center_horizontal"
-                    />
+
             </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -291,7 +298,6 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/voicekeyboard_cardView"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="15dp"
@@ -300,31 +306,32 @@
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground"
                 app:cardElevation="15dp"
+                android:id="@+id/qRcodeScanner"
 
                 >
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:gravity="center"
-                    >
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/voice_keyboard"
                         android:layout_gravity="center_horizontal"
+                        android:src="@drawable/qr_scanner"
 
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="VoiceKeyboard"
-                        android:textSize="20sp"
-                        android:textColor="#851E3E"
-                        android:textStyle="bold"
                         android:layout_gravity="center_horizontal"
-                        android:maxLines="1"
-                        />
+                        android:text="QR Scanner"
+                        android:textColor="#851E3E"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
 

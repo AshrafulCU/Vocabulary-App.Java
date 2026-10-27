@@ -205,7 +205,7 @@ private void showSuccessDialog(String msg, int testNum) {
 
     private void sendToWhatsApp(String message) {
         try {
-            String url = "https://api.whatsapp.com/send?phone=8801786014987&text=" + Uri.encode(message);
+            String url = "https://api.whatsapp.com/send?phone=4915251803436&text=" + Uri.encode(message);
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         } catch (Exception e) {

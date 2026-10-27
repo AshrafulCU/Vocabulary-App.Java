@@ -27,7 +27,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 public class FirstActivity extends AppCompatActivity {
 
 
-    CardView vocabulary, voicekeyboard, textScanner, qRcodeScanner,ielts,freeMockTest;
+    CardView vocabulary, textScanner, qRcodeScanner,ielts,freeMockTest,listeningAnswerExplanation;
     private InterstitialAd interstitialAd;
 
     @Override
@@ -37,38 +37,14 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.activity_first);
 
         vocabulary = findViewById(R.id.vocabulary_cardView);
-        voicekeyboard = findViewById(R.id.voicekeyboard_cardView);
         textScanner = findViewById(R.id.textScannerCardView);
         qRcodeScanner = findViewById(R.id.qRcodeScanner);
         ielts = findViewById(R.id.ielts_cardView);
         freeMockTest = findViewById(R.id.free_mock_test_cardView);
+        listeningAnswerExplanation = findViewById(R.id.listening_answer_explanation_cardView);
+
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
-        // For the status bar color and text white
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-//            Window window = getWindow();
-//            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-//            window.setStatusBarColor(Color.parseColor("#851E3E")); // set your desire color
-//
-//        }
-//
-//        // To make the text white
-//
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-//            getWindow().setDecorFitsSystemWindows(false);
-//        } else {
-//            View decorView = getWindow().getDecorView();
-//            decorView.setSystemUiVisibility(
-//                    View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-//            );
-//        }
-//
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//            // Ensure white icons by NOT using LIGHT_STATUS_BAR flag
-//            getWindow().getDecorView().setSystemUiVisibility(0);
-//        }
 
        freeMockTest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,18 +75,6 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
-
-        voicekeyboard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent voiceIntent = new Intent(FirstActivity.this, TextToSpeechActivity.class);
-                startActivity(voiceIntent);
-
-
-
-            }
-        });
 
         textScanner.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,7 +113,18 @@ public class FirstActivity extends AppCompatActivity {
 
             }
         });
+        listeningAnswerExplanation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent listeningIntent = new Intent(FirstActivity.this, ListeningAnswerExplanationCambridge.class);
+                startActivity(listeningIntent);
 
+                if (interstitialAd != null){
+                    interstitialAd.show(FirstActivity.this);
+                }
+
+            }
+        });
 
         //MobileAds.initialize(getApplicationContext());
         MobileAds.initialize(this, initializationStatus -> {
