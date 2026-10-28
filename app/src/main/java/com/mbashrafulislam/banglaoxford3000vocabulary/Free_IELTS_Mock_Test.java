@@ -224,7 +224,7 @@ private void showSuccessDialog(String msg, int testNum) {
 
     private void loadRewardedAd() {
         AdRequest adRequest = new AdRequest.Builder().build();
-        RewardedAd.load(this, "ca-app-pub-3940256099942544/5224354917",
+        RewardedAd.load(this, "ca-app-pub-2173890419930461/4413185001",
 
                 // Test ID:  ca-app-pub-3940256099942544/5224354917
 

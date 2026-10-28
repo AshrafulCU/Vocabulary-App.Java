@@ -38,15 +38,15 @@
             android:exported="false" /> <!-- [FIX] AdMob App ID (Caret position fixed here) -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
+            android:value="ca-app-pub-2173890419930461~2210293733" />
         <!--
      Test ID: ca-app-pub-3940256099942544~3347511713
 
      Real ID: ca-app-pub-2173890419930461~2210293733
         -->
-        <activity
-            android:name=".TextToSpeechActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".TextToSpeechActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".MainActivityPdfShower"
             android:exported="false"

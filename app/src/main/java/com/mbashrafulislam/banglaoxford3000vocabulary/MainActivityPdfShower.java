@@ -83,7 +83,7 @@ public class MainActivityPdfShower extends AppCompatActivity {
     private void loadInterstitialAd() {
         AdRequest adRequest = new AdRequest.Builder().build();
 
-        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest,
+        InterstitialAd.load(this, "ca-app-pub-2173890419930461/4961551788", adRequest,
 
                 // Test ID: ca-app-pub-3940256099942544/1033173712
                 // Real ID: ca-app-pub-2173890419930461/4961551788
